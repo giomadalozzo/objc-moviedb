@@ -28,7 +28,7 @@
             } else {
                 NSMutableArray *genresArray = [[NSMutableArray alloc] init];
                 
-                NSMutableDictionary *genres = [[[json valueForKey:@"genres"] objectAtIndex:0]mutableCopy];
+                NSMutableDictionary *genres = [json valueForKey:@"genres"];
                 for(id key in genres){
                      NSNumber *genreId = [genres valueForKey:@"id"];
                      NSString *genre = [genres valueForKey:@"name"];
@@ -41,7 +41,7 @@
             }
             
         }else{
-            NSLog(@"deu ruim");
+            NSLog(@"Error, data is nil!");
         }
     }];
     
