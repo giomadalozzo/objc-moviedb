@@ -6,5 +6,5 @@
 //
 
 @interface RequestAPI : NSObject
-
+- (void) requestGenres;
 @end

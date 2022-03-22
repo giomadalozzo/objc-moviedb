@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RequestAPI.h"
 @interface AppDelegate ()
 
 @end
@@ -15,7 +15,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    RequestAPI *request = [[RequestAPI alloc] init];
+    [request requestGenres];
     return YES;
 }
 
