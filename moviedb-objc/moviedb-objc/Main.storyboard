@@ -11,7 +11,7 @@
         <!--Movies-->
         <scene sceneID="eU3-gG-npI">
             <objects>
-                <viewController id="CTb-7Z-zSZ" customClass="MainView" customModule="moviedb_objc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CTb-7Z-zSZ" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Odu-dO-0ld">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,6 +100,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="3e7-3l-MiH"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mdb-2P-IYv" id="Txn-5a-2Qi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDp-i1-lkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
