@@ -6,5 +6,9 @@
 //
 
 @interface RequestAPI : NSObject
-- (void) requestGenres;
+- (void) requestGenres: (void (^)(NSMutableArray *))completion;
+- (void) requestNowPlaying: (void (^)(NSMutableArray *))completion arrayGenres:(NSMutableArray *)arrayGenres;
+- (void) requestPopular: (void (^)(NSMutableArray *))completion arrayGenres:(NSMutableArray *)arrayGenres;
+- (NSString*) genreIdToName: (NSMutableArray *)id arrayGenres:(NSMutableArray *)arrayGenres;
 @end
+
