@@ -6,7 +6,6 @@
 //
 
 #import "MovieViewCell.h"
-#import "Film.h"
 
 @implementation MovieViewCell
 

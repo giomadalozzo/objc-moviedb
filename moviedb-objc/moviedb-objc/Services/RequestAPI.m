@@ -88,8 +88,6 @@
                     auxFilm.overview = overview;
                     auxFilm.voteAverage = voteAverage;
                     
-                    NSLog(@"%@", auxFilm);
-                    
                     NSString *genres = [self genreIdToName: genres_aux arrayGenres: arrayGenres];
                     auxFilm.genres = genres;
                     
@@ -146,8 +144,6 @@
                     auxFilm.overview = overview;
                     auxFilm.voteAverage = voteAverage;
                     
-                    NSLog(@"%@", auxFilm);
-                    
                     NSString *genres = [self genreIdToName: genres_aux arrayGenres: arrayGenres];
                     auxFilm.genres = genres;
                     
@@ -178,7 +174,6 @@
     }
     NSMutableString *result = [NSMutableString stringWithString:[genresString substringToIndex:[genresString length]-2]];
     result = [NSMutableString stringWithString:[NSString stringWithFormat: @"%@%s", result, "."]];
-    NSLog(@"RESULT: %@", result);
     return result;
 }
 @end

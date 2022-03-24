@@ -18,6 +18,8 @@
 		297314AD27E9057C002E0D39 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 297314AC27E9057C002E0D39 /* Film.m */; };
 		297314B027E905A6002E0D39 /* Genres.m in Sources */ = {isa = PBXBuildFile; fileRef = 297314AF27E905A6002E0D39 /* Genres.m */; };
 		297314B327ECD7CE002E0D39 /* MovieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 297314B227ECD7CE002E0D39 /* MovieViewCell.m */; };
+		297314B627ECF78F002E0D39 /* DetailsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 297314B527ECF78F002E0D39 /* DetailsTableView.m */; };
+		297314B927ECF7AC002E0D39 /* DetailsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 297314B827ECF7AC002E0D39 /* DetailsTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		297314AF27E905A6002E0D39 /* Genres.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Genres.m; sourceTree = "<group>"; };
 		297314B127ECD7BB002E0D39 /* MovieViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewCell.h; sourceTree = "<group>"; };
 		297314B227ECD7CE002E0D39 /* MovieViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewCell.m; sourceTree = "<group>"; };
+		297314B427ECF780002E0D39 /* DetailsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsTableView.h; sourceTree = "<group>"; };
+		297314B527ECF78F002E0D39 /* DetailsTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsTableView.m; sourceTree = "<group>"; };
+		297314B727ECF79C002E0D39 /* DetailsTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsTableCell.h; sourceTree = "<group>"; };
+		297314B827ECF7AC002E0D39 /* DetailsTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,10 @@
 				29258FFD27E8F89B0069A0D2 /* main.m */,
 				297314B127ECD7BB002E0D39 /* MovieViewCell.h */,
 				297314B227ECD7CE002E0D39 /* MovieViewCell.m */,
+				297314B427ECF780002E0D39 /* DetailsTableView.h */,
+				297314B527ECF78F002E0D39 /* DetailsTableView.m */,
+				297314B727ECF79C002E0D39 /* DetailsTableCell.h */,
+				297314B827ECF7AC002E0D39 /* DetailsTableCell.m */,
 			);
 			path = "moviedb-objc";
 			sourceTree = "<group>";
@@ -185,7 +195,9 @@
 				297314A927E8FE81002E0D39 /* RequestAPI.m in Sources */,
 				29258FF327E8F8990069A0D2 /* ViewController.m in Sources */,
 				29258FED27E8F8990069A0D2 /* AppDelegate.m in Sources */,
+				297314B927ECF7AC002E0D39 /* DetailsTableCell.m in Sources */,
 				297314AD27E9057C002E0D39 /* Film.m in Sources */,
+				297314B627ECF78F002E0D39 /* DetailsTableView.m in Sources */,
 				29258FFE27E8F89B0069A0D2 /* main.m in Sources */,
 				297314B327ECD7CE002E0D39 /* MovieViewCell.m in Sources */,
 				29258FF027E8F8990069A0D2 /* SceneDelegate.m in Sources */,
