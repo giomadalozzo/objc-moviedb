@@ -6,9 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Genres.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
 
 @end
 

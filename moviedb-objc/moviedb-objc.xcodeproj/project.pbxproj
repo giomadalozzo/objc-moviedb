@@ -17,6 +17,7 @@
 		297314A927E8FE81002E0D39 /* RequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 297314A827E8FE81002E0D39 /* RequestAPI.m */; };
 		297314AD27E9057C002E0D39 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 297314AC27E9057C002E0D39 /* Film.m */; };
 		297314B027E905A6002E0D39 /* Genres.m in Sources */ = {isa = PBXBuildFile; fileRef = 297314AF27E905A6002E0D39 /* Genres.m */; };
+		297314B327ECD7CE002E0D39 /* MovieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 297314B227ECD7CE002E0D39 /* MovieViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		297314AC27E9057C002E0D39 /* Film.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Film.m; sourceTree = "<group>"; };
 		297314AE27E90599002E0D39 /* Genres.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Genres.h; sourceTree = "<group>"; };
 		297314AF27E905A6002E0D39 /* Genres.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Genres.m; sourceTree = "<group>"; };
+		297314B127ECD7BB002E0D39 /* MovieViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewCell.h; sourceTree = "<group>"; };
+		297314B227ECD7CE002E0D39 /* MovieViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				29258FF927E8F89B0069A0D2 /* LaunchScreen.storyboard */,
 				29258FFC27E8F89B0069A0D2 /* Info.plist */,
 				29258FFD27E8F89B0069A0D2 /* main.m */,
+				297314B127ECD7BB002E0D39 /* MovieViewCell.h */,
+				297314B227ECD7CE002E0D39 /* MovieViewCell.m */,
 			);
 			path = "moviedb-objc";
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				29258FED27E8F8990069A0D2 /* AppDelegate.m in Sources */,
 				297314AD27E9057C002E0D39 /* Film.m in Sources */,
 				29258FFE27E8F89B0069A0D2 /* main.m in Sources */,
+				297314B327ECD7CE002E0D39 /* MovieViewCell.m in Sources */,
 				29258FF027E8F8990069A0D2 /* SceneDelegate.m in Sources */,
 				297314B027E905A6002E0D39 /* Genres.m in Sources */,
 			);

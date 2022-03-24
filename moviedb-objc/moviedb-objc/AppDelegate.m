@@ -15,16 +15,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    RequestAPI *request = [[RequestAPI alloc] init];
-    [request requestGenres: ^(NSMutableArray *arrayGenres){
-        NSLog(@"%@", arrayGenres);
-        [request requestNowPlaying:^(NSMutableArray *arrayNowPlaying) {
-            NSLog(@"%@", arrayNowPlaying);
-        } arrayGenres:arrayGenres];
-        [request requestPopular:^(NSMutableArray *arrayPopular) {
-            NSLog(@"%@", arrayPopular);
-        } arrayGenres:arrayGenres];
-    }];
+    
     return YES;
 }
 

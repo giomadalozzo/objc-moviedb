@@ -7,11 +7,17 @@
 
 #import "ViewController.h"
 #import "UIKit/UIKit.h"
+#import "MovieViewCell.h"
+#import "RequestAPI.h"
+#import "Genres.h"
+#import "Film.h"
 
 @interface ViewController ()
 <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property NSMutableArray <Film*>* popularArray;
+@property NSMutableArray <Film*>* nowPlayingArray;
 
 @end
 
@@ -21,11 +27,24 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    RequestAPI *request = [[RequestAPI alloc] init];
+    [request requestGenres: ^(NSMutableArray *arrayGenres){
+        
+        [request requestPopular:^(NSMutableArray <Film*>* popularArray) {
+            NSLog(@"%@", popularArray);
+            self.popularArray = popularArray;
+        } arrayGenres:arrayGenres];
+        
+        [request requestNowPlaying:^(NSMutableArray <Film*>* nowPlayingArray) {
+            NSLog(@"%@", nowPlayingArray);
+        } arrayGenres:arrayGenres];
+    }];
 }
 
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    MovieViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell"];
     return cell;
 }
 
