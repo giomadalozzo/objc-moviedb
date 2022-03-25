@@ -29,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.spinner startAnimating];
+    self.navigationController.navigationBar.prefersLargeTitles = YES;
     self.tableView.hidden = YES;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
