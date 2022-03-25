@@ -17,6 +17,8 @@
 <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+
 @property (strong, atomic) NSMutableArray <Film*>* popularArray;
 @property (strong, atomic) NSMutableArray <Film*>* nowPlayingArray;
 
@@ -26,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.spinner startAnimating];
+    self.tableView.hidden = YES;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -45,6 +49,7 @@
             self.nowPlayingArray = nowPlayingArray;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
+                self.tableView.hidden = NO;
             });
         } arrayGenres:arrayGenres];
         
@@ -81,6 +86,25 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if(section == 0){
+        return @"Popular Movies";
+    }else{
+        return @"Now Playing";
+    }
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
+    [header setBackgroundColor: [UIColor whiteColor]];
+    [header.textLabel setTextColor:[UIColor blackColor]];
+    [header.textLabel setFont:[UIFont fontWithName:@"System Bold" size:17]];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 30;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

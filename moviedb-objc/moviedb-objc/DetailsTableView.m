@@ -24,6 +24,8 @@
     [super viewDidLoad];
     self.tableViewDetails.delegate = self;
     self.tableViewDetails.dataSource = self;
+    
+    
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -31,9 +33,9 @@
     
     cell.titleLabel.text = self.movie.title;
     cell.posterImage.image = self.movie.image;
-//    cell.genresLabel.text = self.movie.genres;
+    cell.genresLabel.text = self.movie.genres;
     cell.overviewLabel.text = self.movie.overview;
-    cell.starsLabel.text = [NSString stringWithFormat:@"%@",self.movie.voteAverage];
+    cell.votesLabel.text = [NSString stringWithFormat:@"%@",self.movie.voteAverage];
     
     return cell;
 }
