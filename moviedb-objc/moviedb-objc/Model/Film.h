@@ -13,7 +13,7 @@
 @property NSString* title;
 @property UIImage* image;
 @property NSString* overview;
-@property NSNumber* voteAverage;
+@property NSString* voteAverage;
 @property NSString* genres;
 @property(readonly, copy) NSString *description;
 

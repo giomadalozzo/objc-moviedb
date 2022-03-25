@@ -70,11 +70,15 @@
                 
                 NSMutableDictionary *nowPlaying = [json valueForKey:@"results"];
                 for(id key in nowPlaying){
+                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                    [formatter setMaximumFractionDigits:1];
+                    [formatter setRoundingMode: NSNumberFormatterRoundDown];
+                    
                     NSNumber *nowPlayingId = [key valueForKey:@"id"];
                     NSString *title = [key valueForKey:@"title"];
                     NSString *posterPath = [key valueForKey:@"poster_path"];
                     NSString *overview = [key valueForKey:@"overview"];
-                    NSNumber *voteAverage = [key valueForKey:@"vote_average"];
+                    NSDecimalNumber *voteAverage = [key valueForKey:@"vote_average"];
                     NSMutableArray *genres_aux = [key valueForKey:@"genre_ids"];
                     NSString *urlPoster = [NSString stringWithFormat:@"https://image.tmdb.org/t/p/w500%@", posterPath];
                     NSURL *url = [NSURL URLWithString:urlPoster];
@@ -86,7 +90,10 @@
                     auxFilm.title = title;
                     auxFilm.image = image;
                     auxFilm.overview = overview;
-                    auxFilm.voteAverage = voteAverage;
+                    
+                    NSString *vote = [formatter stringFromNumber:voteAverage];
+                    
+                    auxFilm.voteAverage = vote;
                     
                     NSString *genres = [self genreIdToName: genres_aux arrayGenres: arrayGenres];
                     auxFilm.genres = genres;
@@ -126,6 +133,10 @@
                 
                 NSMutableDictionary *popularMovies = [json valueForKey:@"results"];
                 for(id key in popularMovies){
+                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                    [formatter setMaximumFractionDigits:1];
+                    [formatter setRoundingMode: NSNumberFormatterRoundDown];
+
                     NSNumber *popularMoviesId = [key valueForKey:@"id"];
                     NSString *title = [key valueForKey:@"title"];
                     NSString *posterPath = [key valueForKey:@"poster_path"];
@@ -142,7 +153,10 @@
                     auxFilm.title = title;
                     auxFilm.image = image;
                     auxFilm.overview = overview;
-                    auxFilm.voteAverage = voteAverage;
+                    
+                    NSString *vote = [formatter stringFromNumber:voteAverage];
+                    
+                    auxFilm.voteAverage = vote;
                     
                     NSString *genres = [self genreIdToName: genres_aux arrayGenres: arrayGenres];
                     auxFilm.genres = genres;
